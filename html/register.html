@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/register.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="index.html" style="text-decoration: none"
+        ><p id="logo">Flipr</p></a
+      >
+    </div>
+
+    <div class="register">
+      <div class="Heading">
+        <h1>Register</h1>
+      </div>
+      <form action="" method="post">
+        <div class="register-form">
+          <div class="role-sel">
+            <label for="role">Role:</label>
+            <select class="role" name="role" required>
+              <option value="">Select Role</option>
+              <option value="Admin">Admin</option>
+              <option value="Staff">Staff</option>
+            </select>
+          </div>
+          <div class="name-inp">
+            <label for="name">Name:</label>
+            <input
+              class="input"
+              type="text"
+              id="name"
+              name="name"
+              required
+              autocomplete="off"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="id-inp">
+            <label id="id-label" for="id">ID Number:</label>
+            <input
+              class="input"
+              type="text"
+              id="id"
+              name="id"
+              required
+              pattern="\d{10}"
+              title="ID Number must be exactly 10 digits"
+              autocomplete="off"
+              placeholder="Enter 10-digit ID number"
+            />
+          </div>
+          <div class="email-inp">
+            <label for="email">Email:</label>
+            <input
+              class="input"
+              type="email"
+              id="email"
+              name="email"
+              required
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              title="Please enter a valid email address"
+              autocomplete="off"
+              placeholder="Enter a valid email address"
+            />
+          </div>
+          <div class="pass-inp">
+            <label for="password">Password:</label>
+            <input
+              class="input"
+              type="password"
+              id="password"
+              name="password"
+              required
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$"
+              title="Password must be at least 8 characters, include uppercase, lowercase, number, and special character."
+              autocomplete="off"
+              placeholder="At least 8 chars, uppercase, lowercase, number, special char"
+            />
+          </div>
+        </div>
+        <div class="button">
+          <button id="reg-btn" type="submit">Register</button>
+        </div>
+      </form>
+      <div class="alr-reg">
+        <p class="log-text">
+          Already registered? <a class="login" href="login.html">Log in</a>
+        </p>
+      </div>
+    </div>
+    <script src="/js/register.js"></script>
+  </body>
+</html>

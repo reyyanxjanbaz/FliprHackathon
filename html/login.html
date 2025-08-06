@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="header">
+      <a
+        href="index.html"
+        style="text-decoration: none"
+        data-tooltip="Go to Home"
+      >
+        <p id="logo">Flipr</p>
+      </a>
+    </div>
+    <div class="login">
+      <div class="Heading">
+        <h1>Login</h1>
+      </div>
+      <form method="post">
+        <div class="login-form">
+          <div class="role-sel">
+            <label for="role">Role:</label>
+            <select class="role" name="role" required>
+              <option value="">Select Role</option>
+              <option value="Admin">Admin</option>
+              <option value="Staff">Staff</option>
+            </select>
+          </div>
+          <div class="id-email-inp">
+            <label for="id">ID Number:</label>
+            <input
+              class="input"
+              type="text"
+              id="id"
+              name="id"
+              required
+              pattern="\d{10}"
+              title="ID Number must be exactly 10 digits"
+              placeholder="Enter 10-digit ID number"
+              autocomplete="off"
+            />
+          </div>
+          <div class="pass-inp">
+            <label for="password">Password:</label>
+            <input
+              class="input"
+              type="password"
+              id="password"
+              name="password"
+              required
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$"
+              title="Password must be at least 8 characters, include uppercase, lowercase, number, and special character."
+              placeholder="At least 8 chars, uppercase, lowercase, number, special char"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div class="button">
+          <button id="login-btn" type="submit" data-tooltip="Login">
+            Login
+          </button>
+        </div>
+      </form>
+      <div class="alr-reg">
+        <p class="log-text">
+          Don't have an account?
+          <a class="reg" href="register.html" data-tooltip="Go to Register"
+            >Register</a
+          >
+        </p>
+      </div>
+    </div>
+    <script src="/js/login.js"></script>
+  </body>
+</html>
